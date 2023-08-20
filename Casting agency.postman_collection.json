@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "aebae002-fd3b-4170-b11f-1b2b3636b614",
+		"name": "Casting agency",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16405508",
+		"_collection_link": "https://gold-astronaut-367051.postman.co/workspace/Team-Workspace~48828330-a12d-41a4-860f-5da7c9b4b668/collection/16405508-aebae002-fd3b-4170-b11f-1b2b3636b614?action=share&creator=16405508&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "add movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWYwZTczNTdmOGMzNGM3MmJkNmQ3IiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE2NjE1NzgsImV4cCI6MTY5MTY2ODc3OCwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIl19.no18a5plzp3Fxx1ahJ5hkb38J49t0So5L8aKanPFdD0Y8ZFx9VhRPf1Wxr2pFDJL9FT9YxlFsMl5FOpEUqyifkb7SACWqhIOPFJnlu6R28awaf48T1FoQHvAK6VSeTsJmSEBVCDjwfKvDZ1X-UPXtNcO4BJvF17vkNpTYYi2CYlcEfQP2nKa-zxV2ny7jvRtMK6DiNn1Y_Wkkhp79qTTmOX_iC6g-vtcBhzSEc7fcgwZylH0qVPK0h5DU44gHd1IrLCpWvAwxYnd587pAa_NMjvXXn8nQoX0Cur7Ww05v9un2YE4sE-emp4UDcCIRxPVRrS4fRmNqeTqb0ohJNXScA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Gintama the movie\",\n    \"release_date\": \"03/07/2020\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWYwZTczNTdmOGMzNGM3MmJkNmQ3IiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE2NjE1NzgsImV4cCI6MTY5MTY2ODc3OCwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIl19.no18a5plzp3Fxx1ahJ5hkb38J49t0So5L8aKanPFdD0Y8ZFx9VhRPf1Wxr2pFDJL9FT9YxlFsMl5FOpEUqyifkb7SACWqhIOPFJnlu6R28awaf48T1FoQHvAK6VSeTsJmSEBVCDjwfKvDZ1X-UPXtNcO4BJvF17vkNpTYYi2CYlcEfQP2nKa-zxV2ny7jvRtMK6DiNn1Y_Wkkhp79qTTmOX_iC6g-vtcBhzSEc7fcgwZylH0qVPK0h5DU44gHd1IrLCpWvAwxYnd587pAa_NMjvXXn8nQoX0Cur7Ww05v9un2YE4sE-emp4UDcCIRxPVRrS4fRmNqeTqb0ohJNXScA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/movies",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWZlMDM4NzRkZTc4ZDJlYTFhYzAzIiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE2NjIyMzQsImV4cCI6MTY5MTY2OTQzNCwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.ojROHUhwMK3lloJ9EaHpeV1amnJb57zpL7Xn8FpU8iewjbNXhx8aoaEjh04XZKmBaiDCdJtj2ewNXB7L-EsXSopKtHk6UdRQqoCPwcjXN4S2zqf2SYaeygT9v4TPqTP9k4rmSTmAlH1lMsvuReHEdqMYWQ3uJEonW_pCuzDy_Dhzk0uURDOSnI1h92nX4DqTVkEEsfmQk90g7jWvUawZwXaaYBN8rx0sVRAAIsbSZFdjUiO5bAMS3KEGLhgyyasLMW2TDQX4WlNBYTP2eZLjCn88J8rM1Ems3_Zau5T4FWKiBqmuezTFpMVTNK39I7H6RrLs-BsszGjOVZQ1Q7u-1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Gintama\",\n    \"release_date\": \"01/12/2022\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/movies/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWZlMDM4NzRkZTc4ZDJlYTFhYzAzIiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE2NjIyMzQsImV4cCI6MTY5MTY2OTQzNCwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.ojROHUhwMK3lloJ9EaHpeV1amnJb57zpL7Xn8FpU8iewjbNXhx8aoaEjh04XZKmBaiDCdJtj2ewNXB7L-EsXSopKtHk6UdRQqoCPwcjXN4S2zqf2SYaeygT9v4TPqTP9k4rmSTmAlH1lMsvuReHEdqMYWQ3uJEonW_pCuzDy_Dhzk0uURDOSnI1h92nX4DqTVkEEsfmQk90g7jWvUawZwXaaYBN8rx0sVRAAIsbSZFdjUiO5bAMS3KEGLhgyyasLMW2TDQX4WlNBYTP2eZLjCn88J8rM1Ems3_Zau5T4FWKiBqmuezTFpMVTNK39I7H6RrLs-BsszGjOVZQ1Q7u-1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/movies/8",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"movies",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Actor",
+			"item": [
+				{
+					"name": "add actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWZlMDM4NzRkZTc4ZDJlYTFhYzAzIiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE2NjIyMzQsImV4cCI6MTY5MTY2OTQzNCwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.ojROHUhwMK3lloJ9EaHpeV1amnJb57zpL7Xn8FpU8iewjbNXhx8aoaEjh04XZKmBaiDCdJtj2ewNXB7L-EsXSopKtHk6UdRQqoCPwcjXN4S2zqf2SYaeygT9v4TPqTP9k4rmSTmAlH1lMsvuReHEdqMYWQ3uJEonW_pCuzDy_Dhzk0uURDOSnI1h92nX4DqTVkEEsfmQk90g7jWvUawZwXaaYBN8rx0sVRAAIsbSZFdjUiO5bAMS3KEGLhgyyasLMW2TDQX4WlNBYTP2eZLjCn88J8rM1Ems3_Zau5T4FWKiBqmuezTFpMVTNK39I7H6RrLs-BsszGjOVZQ1Q7u-1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Robert doney .jr\", \n    \"age\": 58,\n    \"gender\": \"male\",\n    \"movie_id\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get actors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWYwZTczNTdmOGMzNGM3MmJkNmQ3IiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE0ODM0OTgsImV4cCI6MTY5MTQ5MDY5OCwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIl19.53rflgrZAtm2eQ7XXI15HviRfab58JJThZ95DG-oYTBzvZy7wiPwqlmYzocwhnpTDo1sfCu99AKuAk2smP2EiLG_k0u5NL3K-Q-Czp0hbcu5HFy4oBTdvMh7-U6uRkcsK-DIRyB1vzZBiEDMdIVfJMi3_4N8io-8JVW0zo_FBdj6AptLjcGpvnpdI9nCFnqwLhOkpdLGBnCPH-li1TRMZ9x7Rh29BGN69ApAovFLiOgVw2j93hwEt1mr9cRuwvv2EpgIvVft4FrbtAQBvVHBDxWNwcopD1PFVWEG-_Ddd8I3mTBgXag4LajVID3cfN87CTKa5iZerw5PQj3JJU-eGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/actors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWZlMDM4NzRkZTc4ZDJlYTFhYzAzIiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE0ODM3OTEsImV4cCI6MTY5MTQ5MDk5MSwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIl19.7tmq0QeNH1ZcKPPyhl96iyC2F1gvx3RGR18a5_gzGytXwF39lMjiNN7x02FWHK4zopIojZNTBSYCTM0qyTxJVEN-oLTrujw_JtXUaWPG29P7jQAqnn122VTUhyp6P0OAUkL-Sigq_ePewUkkYtJHoxifatvTkvr_uDMg59KBm8u5maABKo_a5mp4JjH7x5DD8P5Db77QZm0xQ11ZkwCMGDyOQ-WjOvGsNT3rfhAZ83VobsF_tJ4LGibzZ-Awnkf0mCptQBC4xQdQ9bKyG-5xruyhfZz7xiqf3pebrovzbXqRaCWKVqLXP6Q10_ifRNoq0g2p5zLBPpugd1kJQKqU0w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/actors/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWZlMDM4NzRkZTc4ZDJlYTFhYzAzIiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE0OTQ1MjEsImV4cCI6MTY5MTUwMTcyMSwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIl19.w1v4kpdxQcL-WzuRhSD8EB2wquj68IPZzwKPzGk4lpI7Sqiluc1z66P-tMC0P11NE2DfZFIgeQDO6OWzImP6kn8tKuimp8dA2wYMioF_duDqA1TB0GazPk-q4wYpKREyUuRjMAf-yza4yxeP04AlxDmzyxPJrlMUP5MjVSYTH-aK3iJ0bve-enfgmsVkhk26XucYb3KCpcDOsvXhF4N882CcxWjDRW2zzQU2yzCXzVTba3wM_1M6vyiHEbAcqpg-j1Mqz6sL3Ld6lbrwyIY4BsD2psXzIh6vg1hhHSR7JNgpN7mJSpx8Y7Nh30x7jQiNyNK6cKCiI7-EZWK-NyooEw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"tom\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/actors/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"actors",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF6X2o1TXhQM1F1SFlialVVYkRFciJ9.eyJpc3MiOiJodHRwczovL3NoYW1tYWEtY29mZmUtc2hvcC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjRkMWZlMDM4NzRkZTc4ZDJlYTFhYzAzIiwiYXVkIjoiY2FzdGluZ19hZ2VuY3kiLCJpYXQiOjE2OTE0ODM3OTEsImV4cCI6MTY5MTQ5MDk5MSwiYXpwIjoiSkFnSlVvakhnQ2lDTklXalY3Q1JUaElkaEhYY2N5bEMiLCJzY29wZSI6IiIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIl19.7tmq0QeNH1ZcKPPyhl96iyC2F1gvx3RGR18a5_gzGytXwF39lMjiNN7x02FWHK4zopIojZNTBSYCTM0qyTxJVEN-oLTrujw_JtXUaWPG29P7jQAqnn122VTUhyp6P0OAUkL-Sigq_ePewUkkYtJHoxifatvTkvr_uDMg59KBm8u5maABKo_a5mp4JjH7x5DD8P5Db77QZm0xQ11ZkwCMGDyOQ-WjOvGsNT3rfhAZ83VobsF_tJ4LGibzZ-Awnkf0mCptQBC4xQdQ9bKyG-5xruyhfZz7xiqf3pebrovzbXqRaCWKVqLXP6Q10_ifRNoq0g2p5zLBPpugd1kJQKqU0w",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:5000",
+			"type": "string"
+		}
+	]
+}
